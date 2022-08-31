@@ -5,12 +5,14 @@ import AddPerson from "./Components/AddPerson";
 import Persons from "./Components/Persons";
 import axios from "axios";
 import { useEffect } from "react";
+import Notification from "./Components/Notification";
 
 const App = () => {
   const [persons, setPersons] = useState([]);
   const [newName, setNewName] = useState("");
   const [newNumber, setNewNumber] = useState("");
   const [newFilter, setNewFilter] = useState("");
+  const [goodMessage, setGoodMessage] = useState(null);
 
   const hook = () => {
     axios.get("http://localhost:3001/persons").then((response) => {
@@ -23,6 +25,7 @@ const App = () => {
   return (
     <div>
       <h2>Phonebook</h2>
+      <Notification message={goodMessage} />
       <Filter
         persons={persons}
         newFilter={newFilter}
@@ -36,9 +39,10 @@ const App = () => {
         setNewName={setNewName}
         newNumber={newNumber}
         setNewNumber={setNewNumber}
+        setGoodMessage={setGoodMessage}
       />
       <h2>Numbers</h2>
-      <Persons persons={persons} />
+      <Persons persons={persons} setPersons={setPersons} />
     </div>
   );
 };

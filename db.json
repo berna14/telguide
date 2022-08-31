@@ -1,18 +1,13 @@
 {
   "persons": [
     {
-      "name": "Arto Hellas",
-      "number": "040-123456",
-      "id": 1
-    },
-    {
       "name": "Ada Lovelace",
-      "number": "39-44-5323523",
+      "number": "3300999999",
       "id": 2
     },
     {
       "name": "Dan Abramov",
-      "number": "12-43-234345",
+      "number": "14-66-237705",
       "id": 3
     },
     {
@@ -24,6 +19,16 @@
       "name": "Carlitos Zambrano",
       "number": "358293923",
       "id": 5
+    },
+    {
+      "name": "Franquito Fabra",
+      "number": "3351343221",
+      "id": 6
+    },
+    {
+      "name": "Jorge Pajin",
+      "number": "33-44-7766554",
+      "id": 7
     }
   ]
 }
